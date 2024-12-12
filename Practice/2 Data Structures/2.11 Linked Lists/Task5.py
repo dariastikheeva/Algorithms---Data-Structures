@@ -38,6 +38,7 @@ class List:
             if current.value == after_value:
                 new_node = Node(value)
                 current.next_node, new_node.next_node = new_node, current.next_node
+                break
             
             current = current.next_node
 
