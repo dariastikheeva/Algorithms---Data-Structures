@@ -37,10 +37,16 @@ class Array:
             self.append(value)
             return
         
-        lst = self.data[index:self.length]
+        current_value = self.data[index]
         self.data[index] = value
-        self.data[index + 1:self.length + 1] = lst
-        self.length += 1
+        
+        while index < self.length:
+            self.data[index + 1], current_value = \
+            current_value, self.data[index + 1]
+            
+            index += 1
+        
+        self.length +=1
 
     def __str__(self):
         """
