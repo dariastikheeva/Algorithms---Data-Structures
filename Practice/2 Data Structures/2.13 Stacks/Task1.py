@@ -30,3 +30,16 @@ class Stack:
         # Добавьте ваш код тут.
         elem = Node(value)
         self.top.next_node, elem.next_node = elem, self.top.next_node
+
+
+stack = Stack()
+stack.push(12)
+stack.push(7)
+stack.push(6)
+print(stack.pop())
+
+print(stack.pop())
+
+print(stack.pop())
+
+print(stack.pop())
